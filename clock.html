@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="clock1.css">
+	 <script src="clockface.js"></script>
+	
+</head>
+<body>
+    <div class="clock">
+    <div class="clock-face">
+    	<div class ="twelve"></div>
+    	<div class ="three"></div>
+    	<div class ="six"></div>
+    	<div class ="nine"></div>
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+    </div>
+</div>
+ <style>
+	 	
+body{
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	height: 100vh;
+	background: grey;
+}
+
+.clock{
+ border-radius: 50%;
+  background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;
+  background-size: 80%;
+  height: 1em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 30em;
+}
+.twelve,
+.three,
+.six,
+.nine
+{
+    background: #333;
+    position: absolute;
+}
+
+.twelve,
+.six
+{
+    height: 10px;
+    width: 4px;
+}
+
+.three,
+.nine
+{
+    height: 4px;
+    width: 10px;
+}
+
+.twelve
+{
+    left: 50%;
+    top: -1px;
+}
+
+.three
+{
+    right: -1px;
+    top: 50%;
+}
+
+.six
+{
+    left: 50%;
+    bottom: -1px;
+}
+
+.nine
+{
+    left: 1px;
+    top:50%;
+    }
+.clockface{
+	  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  height: 15%;
+  z-index: 10;
+}
+
+.hour{
+	background: #000;
+  height: 20%;
+  left:0px;
+  position: absolute;
+  top: 0;
+  bottom: 95px;
+  transform-origin: 50% 100%;
+  width: 1.5%;
+transform: rotate(0deg);
+box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+
+}
+.minute{
+	  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+transform: rotate(90deg);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+}
+.second{
+	position: absolute;
+	height: 80px;
+	width:2px;
+	margin:auto;
+	top:0;
+	left:8px;
+	right:0px;
+	bottom:84px;
+	border-radius: 4px;
+	background: black;
+	transform-origin: bottom center;
+	transform: rotate(180deg);
+	z-index: 1;
+}
+
+	 </style>
+</body>
+</html>
